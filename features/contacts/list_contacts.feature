@@ -16,4 +16,4 @@ Feature: List contacts
   Scenario: Contact index displays a message if no contacts are found
     Given I have no contacts
     When I go to the contact index page
-    Then I should see "You don't seem to have any contacts"
+    Then I should see "We couldn't find any contacts"
