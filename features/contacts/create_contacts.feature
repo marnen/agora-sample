@@ -3,7 +3,7 @@ Feature: Create contacts
   I can create new contacts
   So that I can store info about new people as I get to know them
   
-  Scenario: Create contact with only first and last name
+  Scenario: Create contact with only the required fields
     Given I have no contacts
     When I go to the new contact page
     And I fill in the following:
