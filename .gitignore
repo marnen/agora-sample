@@ -1,4 +1,7 @@
+*~
 log
 doc
 config/database.yml
 *.kpf
+db/*.sqlite3
+rerun.txt
