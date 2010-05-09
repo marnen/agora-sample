@@ -1,0 +1,10 @@
+- @page_title = h "My Contacts"
+
+%table
+  %tr
+    %th Last name
+    %th First name
+    %th Address
+    %th Phone number
+    %th E-mail address
+  = render :partial => 'contact', :collection => @contacts
