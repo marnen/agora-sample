@@ -2,14 +2,16 @@
 
 = error_messages_for :contact
 
+%p Fields labeled in <span class="required">italics</span> are required.
+
 - form_for @contact do |f|
   %table.form
     - [:first_name, :last_name].each do |field|
       %tr
-        %th= f.label field
+        %th= f.label field, nil, :class => 'required'
         %td= f.text_field field
     %tr
-      %th= f.label :address
+      %th= f.label :address, nil, :class => 'required'
       %th= f.text_area :address, :rows => 3
     - [:phone, :email].each do |field|
       %tr
