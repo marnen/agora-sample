@@ -1,0 +1,7 @@
+Autotest.add_hook :initialize do |at|
+  at.add_exception 'spec-results/index.html'
+  at.add_exception 'features_report.html'
+  at.add_exception %r{\A(\./)?webrat-.*\.html\Z}
+  at.add_exception 'db'
+  at.add_exception 'rerun.txt'
+end
