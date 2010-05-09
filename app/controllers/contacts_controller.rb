@@ -28,5 +28,10 @@ class ContactsController < ApplicationController
     else
       @contacts = Contact.all
     end
+    
+    respond_to do |format|
+      format.html
+      format.json { render :json => @contacts.to_json }
+    end
   end
 end

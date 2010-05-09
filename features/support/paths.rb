@@ -19,6 +19,9 @@ module NavigationHelpers
       
     when /the contact index page/
       contacts_path
+      
+    when /the contact index (JSON|XML) API call/
+      formatted_contacts_path($1.downcase)
     
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
