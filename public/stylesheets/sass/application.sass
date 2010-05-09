@@ -1,0 +1,18 @@
+=flash_box(!color)
+  :border = 1px solid !color
+  :background-color = !color + #cccccc
+  
+.errorExplanation
+  :border 2px solid red
+  
+.fieldWithErrors
+  :background-color red
+  :color white
+
+#flash
+  .error
+    +flash_box(red)
+  .warning
+    +flash_box(yellow)
+  .notice
+    +flash_box(green)

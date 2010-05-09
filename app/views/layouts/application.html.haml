@@ -2,5 +2,14 @@
 %html
   %head
     %title= @page_title
+    = stylesheet_link_tag 'application'
   %body
+    %h1= @page_title
+    #flash
+      - if flash[:error]
+        .error= flash[:error]
+      - if flash[:warning]
+        .warning= flash[:warning]
+      - if flash[:notice]
+        .notice= flash[:notice]
     = yield

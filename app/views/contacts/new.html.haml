@@ -1,5 +1,7 @@
 - @page_title = h 'New Contact'
 
+= error_messages_for :contact
+
 - form_for @contact do |f|
   %table.form
     - [:first_name, :last_name].each do |field|
