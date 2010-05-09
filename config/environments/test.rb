@@ -30,3 +30,7 @@ config.action_mailer.delivery_method = :test
 # Install RSpec.
 config.gem "rspec", :lib => false, :version => ">= 1.3.0"
 config.gem "rspec-rails", :lib => false, :version => ">= 1.3.2"
+
+# Install Machinist and Faker.
+config.gem 'machinist', :lib => false, :version => ">= 1.0.6"
+config.gem 'faker', :lib => false, :version => ">= 0.3.1"
