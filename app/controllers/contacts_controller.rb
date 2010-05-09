@@ -15,8 +15,8 @@ class ContactsController < ApplicationController
   end
   
   def index
-    if params[:search]
-      @contacts = Contact.by_name params[:search]
+    if @search = params[:search]
+      @contacts = Contact.by_name @search
     else
       @contacts = Contact.all
     end

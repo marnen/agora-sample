@@ -12,5 +12,6 @@ Feature: Search contacts
     When I go to the contact index page
     And I fill in "Search" with "taylor"
     And I press "Search"
+    Then I should see /matching "taylor"/
     Then I should see "Swift" followed by "Anne"
     And I should not see "Robinson"
