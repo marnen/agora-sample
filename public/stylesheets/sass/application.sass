@@ -1,12 +1,29 @@
 =flash_box(!color)
   :border = 1px solid !color
   :background-color = !color + #cccccc
+  :padding 1px
+  
+body
+  :background-color white
+  :color black
+  :font
+    :family Helvetica, Arial, Geneva, sans-serif
+    :size 14px
+    
+td
+  :background-color #cccccc
+  :color black
+  
+th
+  :background-color #0000ee
+  :color white
   
 .required
   :font-style italic
   
 .errorExplanation
   :border 2px solid red
+  :padding 2px
   
 .fieldWithErrors
   :background-color red
