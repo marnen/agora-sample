@@ -18,8 +18,8 @@ Feature: Create contacts
     
   Scenario: Create contact with optional fields
     When I fill in the following:
-      | Phone | (518) 555-1212 |
-      | Email | john@smith.org |
+      | Phone number   | (518) 555-1212 |
+      | E-mail address | john@smith.org |
     And I press "Save"
     Then I should have 1 contact
     And I should be on the contact index page

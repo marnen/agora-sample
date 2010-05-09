@@ -13,8 +13,10 @@
     %tr
       %th= f.label :address, nil, :class => 'required'
       %th= f.text_area :address, :rows => 3
-    - [:phone, :email].each do |field|
+    %tr
+    -# Unfortunately, OrderedHash is more trouble than it's worth in Ruby 1.8...
+    - [[:phone, 'Phone number'], [:email, 'E-mail address']].each do |field_array|
       %tr
-        %th= f.label field
-        %td= f.text_field field
+        %th= f.label field_array[0], field_array[1]
+        %td= f.text_field field_array[0]
   = f.submit "Save"
