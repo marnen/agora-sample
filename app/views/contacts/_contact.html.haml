@@ -1,6 +1,6 @@
 %tr
   %td&= contact.last_name
   %td&= contact.first_name
-  %td&= contact.address
+  %td= h(contact.address).gsub("\n", '<br>')
   %td&= contact.phone
   %td&= contact.email
