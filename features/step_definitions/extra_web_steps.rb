@@ -6,3 +6,11 @@ Then /^I should see "([^\"]*)" followed by "([^\"]*)"$/ do |string1, string2|
     assert_contain regexp
   end
 end
+
+Then /^the response should be success$/ do
+  response.should be_success
+end
+
+Then /^the response status should be (\d+)$/ do |status|
+  response.code.should == status
+end

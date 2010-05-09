@@ -14,6 +14,9 @@ module NavigationHelpers
     when /the new contact page/
       new_contact_path
       
+    when /the new contact (JSON|XML) API call/
+      formatted_contacts_path($1.downcase)
+      
     when /the contact index page/
       contacts_path
     

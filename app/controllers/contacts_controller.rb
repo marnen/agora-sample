@@ -7,10 +7,18 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     if @contact.save
       flash[:notice] = 'Contact was successfully created!'
-      redirect_to :action => 'index' and return
+      
+      respond_to do |format|
+        format.html { redirect_to :action => 'index' and return }
+        format.json { render :text => '', :status => :ok and return}
+      end
     else
       flash[:error] = 'That contact could not be created. Please try again.'
-      render :action => 'new'
+      
+      respond_to do |format|
+        format.html { render :action => 'new' }
+        format.json { render :json => @contact.errors.to_json, :status => :unprocessable_entity }
+      end
     end
   end
   
